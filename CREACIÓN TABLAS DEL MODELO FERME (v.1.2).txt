@@ -253,7 +253,7 @@ INSERT INTO DIRECCION VALUES (214, 13, 'Santiago', 'Calle falsa',123,null);
 INSERT INTO DIRECCION VALUES (111, 13, 'Chicureo', 'Brisas',1231,null);
 
 ----------CLIENTE-----------
-INSERT INTO CLIENTE VALUES (213,'12423531','k',1, 'Juan', 'Reyes','Juan@gmail.com','123');
+INSERT INTO CLIENTE VALUES (114,213,'12423531','k',1, 'Juan', 'Reyes','Juan@gmail.com','123');
 INSERT INTO CLIENTE VALUES (112,213,'12366343','4',1, 'Roberto', 'Cubillos','Roberto@gmail.com','123');
 INSERT INTO CLIENTE VALUES (153,214,'14555312','7',1, 'Arturo', 'R2d2','R2d2@gmail.com','123');
 

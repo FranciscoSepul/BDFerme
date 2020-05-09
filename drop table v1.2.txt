@@ -13,3 +13,4 @@ drop table TIPOPRODUCTO cascade constraints;
 drop table CLIENTE cascade constraints;
 drop table DOCUMENTO cascade constraints;
 drop table PRODUCTO cascade constraints;
+drop table empresa cascade constraints;
