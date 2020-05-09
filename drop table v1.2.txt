@@ -1,0 +1,15 @@
+drop table SUCURSAL cascade constraints;
+drop table DIRECCION cascade constraints;
+drop table EMPLEADO cascade constraints;
+drop table VENTAS cascade constraints;
+drop table PERFIL cascade constraints;
+drop table DETALLEVENTA cascade constraints;
+drop table ORDENESCOMPRA cascade constraints;
+drop table FORMADEPAGO cascade constraints;
+drop table SUCURSAL cascade constraints;
+drop table PROVEEDOR cascade constraints;
+drop table RETIRO cascade constraints;
+drop table TIPOPRODUCTO cascade constraints;
+drop table CLIENTE cascade constraints;
+drop table DOCUMENTO cascade constraints;
+drop table PRODUCTO cascade constraints;
