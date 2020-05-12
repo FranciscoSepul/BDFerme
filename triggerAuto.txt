@@ -1,0 +1,70 @@
+create sequence Auid
+start with 1
+increment by 1
+order;
+-----------Trigger direccion-----
+create or replace trigger autoidDIRECCION
+before insert on DIRECCION
+for each row
+begin
+  select Auid.nextval into :new.id from DUAL;
+end;
+
+
+
+
+
+
+CREATE TABLE DIRECCION 
+(id           INTEGER,
+ region       INTEGER ,
+ comuna       VARCHAR2(40),
+ pasaje       VARCHAR2(40),
+ numero       Integer,
+ numeroDepto  VARCHAR2(40));
+ALTER TABLE DIRECCION 
+ADD CONSTRAINT DIRECCION_PK PRIMARY KEY ( id ) ;
+
+create sequence Auid
+start with 1
+increment by 1  
+order;
+
+-- Creacion de trigger
+create or replace trigger autoidDIRECCION
+before insert on DIRECCION
+for each row
+begin
+  select Auid.nextval into :new.id from dual;
+end;
+
+INSERT INTO DIRECCION VALUES (1,13, 'Independencia', 'Buena ventura',1512,null);
+INSERT INTO DIRECCION VALUES (13, 'Santiago', 'Calle falsa',123,null);
+
+select * from direccion
+
+
+
+CREATE TABLE DIRECCION 
+(id           number,
+ region       INTEGER ,
+ comuna       VARCHAR2(40),
+ pasaje       VARCHAR2(40),
+ numero       Integer,
+ numeroDepto  VARCHAR2(40));
+ALTER TABLE DIRECCION 
+ADD CONSTRAINT DIRECCION_PK PRIMARY KEY ( id ) ;
+
+create sequence Auid
+start with 1
+increment by 1;
+
+create or replace trigger autoidDIRECCION
+before insert on DIRECCION
+for each row
+begin
+  select Auid.nextval into :new.id from DUAL;
+end;
+
+INSERT INTO DIRECCION (region,comuna,pasaje,numero,numeroDepto) VALUES (13, 'Independencia', 'Buena ventura',1512,null);
+INSERT INTO DIRECCION (region,comuna,pasaje,numero,numeroDepto) VALUES (13, 'Santiago', 'Calle falsa',123,null);
