@@ -41,7 +41,7 @@ ADD CONSTRAINT TIPODOCUMENTO_PK PRIMARY KEY ( id ) ;
 
 CREATE TABLE DOCUMENTO 
 (
-  id       INTEGER NOT NULL , 
+  id       INTEGER, 
   tipoDoc  INTEGER , 
   NumFolio INTEGER NOT NULL , 
   fecha    VARCHAR2(40)
@@ -50,7 +50,7 @@ ALTER TABLE DOCUMENTO
 ADD CONSTRAINT DOCUMENTO_PK PRIMARY KEY ( id ) ;
 
 ALTER TABLE DOCUMENTO 
-ADD CONSTRAINT DOCUMENTO_TIPODOCUMENTO_FK FOREIGN KEY ( id) 
+ADD CONSTRAINT DOCUMENTO_TIPODOCUMENTO_FK FOREIGN KEY ( tipoDoc) 
 REFERENCES TIPODOCUMENTO ( id);
 
 CREATE TABLE SUCURSAL
@@ -308,6 +308,11 @@ start with 1
 increment by 1
 order;
 
+create sequence AuidPRODUCTO
+start with 1
+increment by 1
+order;
+
 create sequence AuidDETALLEVENTA
 start with 1
 increment by 1
@@ -364,6 +369,14 @@ before insert on CLIENTE
 for each row
 begin
   select AuidCLIENTE.nextval into :new.id from DUAL;
+end;
+
+
+ create or replace trigger autoidPRODUCTO
+before insert on PRODUCTO
+for each row
+begin
+  select AuidPRODUCTO.nextval into :new.id from DUAL;
 end;
 
  create or replace trigger autoidTIPODOCUMENTO
@@ -448,7 +461,7 @@ end;
 before insert on VENTAS
 for each row
 begin
-  select AuidVENTAS.nextval into :new.idretiro from DUAL;
+  select AuidVENTAS.nextval into :new.id from DUAL;
 end;
 ----------Insert--------------
 ----------DIRECCION-----------
@@ -456,10 +469,10 @@ INSERT INTO DIRECCION (region,comuna,pasaje,numero,numeroDepto) VALUES (13, 'Ind
 INSERT INTO DIRECCION (region,comuna,pasaje,numero,numeroDepto) VALUES (13, 'Santiago', 'Calle falsa',123,null);
 INSERT INTO DIRECCION (region,comuna,pasaje,numero,numeroDepto) VALUES (13, 'Chicureo', 'Brisas',1231,null);
 
-----------CLIENTE-----------
-INSERT INTO CLIENTE (iddireccion,runCliente,digitoVerif,estado,nombre,apellido,correo,contrasena ) VALUES ('12423531','k',1, 'Juan', 'Reyes',0,'Juan@gmail.com','123');
-INSERT INTO CLIENTE (iddireccion,runCliente,digitoVerif,estado,nombre,apellido,correo,contrasena ) VALUES ('12366343','4',1, 'Roberto', 'Cubillos',0,'Roberto@gmail.com','123');
-INSERT INTO CLIENTE (iddireccion,runCliente,digitoVerif,estado,nombre,apellido,correo,contrasena ) VALUES ('14555312','7',1, 'Arturo', 'R2d2',0,'R2d2@gmail.com','123');
+----------CLIENTE-----------8 
+INSERT INTO CLIENTE (iddireccion,runCliente,digitoVerif,estado,nombre,apellido,sexo,correo,contrasena ) VALUES (1,'12423531','k',1, 'Juan', 'Reyes',1,'Juan@gmail.com','123');
+INSERT INTO CLIENTE (iddireccion,runCliente,digitoVerif,estado,nombre,apellido,sexo,correo,contrasena ) VALUES (2,'12366343','4',1, 'Roberto', 'Cubillos',1,'Roberto@gmail.com','123');
+INSERT INTO CLIENTE (iddireccion,runCliente,digitoVerif,estado,nombre,apellido,sexo,correo,contrasena ) VALUES (3,'14555312','7',1, 'Arturo', 'R2d2',1,'R2d2@gmail.com','123');
 
 ---------TIPODOCUMENTO---------
 INSERT INTO TIPODOCUMENTO (Nombre) VALUES ('Factura');
@@ -478,26 +491,26 @@ INSERT INTO FORMADEPAGO (efectivo,debito,tarjeta,pOnline) VALUES (0,0,0,1);
 INSERT INTO FORMADEPAGO (efectivo,debito,tarjeta,pOnline) VALUES (0,1,0,0);
 
 --------EMPRESA-----------
-INSERT INTO EMPRESA (rutEmpresa,dvrut,nombteEmpresa,correo,numerotel) VALUES (1,'17335237','5','Planta Carnivora','EnteraAsesina@gmail.com','914515153');
-
+INSERT INTO EMPRESA (rutEmpresa,dvrut,nombteEmpresa,correo,numerotel) VALUES ('17335237','5','Planta Carnivora','EnteraAsesina@gmail.com','914515153');
+----------voy en empresa probado ok 
 --------PROVEEDOR---------
 INSERT INTO PROVEEDOR (idEmpresa,runProveedor,digitoVerif,estado,nombre,numerotel,direccion,correo) VALUES (1,'17335987','7',1,'ARTURO VARGAS','914515153','General 666','ARTURO@gmail.com');
 
 --------SUCURSAL----------
-INSERT INTO SUCURSAL (iddireccion,nombre,telefono) VALUES (1,213,'Santiago Ferme','943264512');
+INSERT INTO SUCURSAL (iddireccion,nombre,telefono) VALUES (2,'Santiago Ferme','943264512');
 
 --------TIPOPRODUCTO------
 INSERT INTO TIPOPRODUCTO (nombreTipoProducto) VALUES ('Herramienta');
 
 --------PRODUCTO---------
-INSERT INTO PRODUCTO (idTipoProducto,idSucursal,idProveedor,nombre,stock,preciouni) VALUES (1,1,1,1,'Martillo',100,5000);
+INSERT INTO PRODUCTO (idTipoProducto,idSucursal,idProveedor,nombre,stock,preciouni) VALUES (1,1,1,'Martillo',100,5000);
 
 --------ORDENESCOMPRA-----
-INSERT INTO ORDENESCOMPRA (idSuc,idProveedor,fecha,cantidad) VALUES (1,1,1,'15-04-2020',100);
+INSERT INTO ORDENESCOMPRA (idSuc,idProveedor,fecha,cantidad) VALUES (1,1,'15-04-2020',100);
 
 
 --------DETALLEVENTA-----
-INSERT INTO DETALLEVENTA (idProducto,fechaCompra,cantidad,Total) VALUES (1,1,'20-03-2019',1,5000);
+INSERT INTO DETALLEVENTA (idProducto,fechaCompra,cantidad,Total) VALUES (1,'20-03-2019',1,5000);
 
 --------PERFIL-----------
 INSERT INTO PERFIL (nombreCargo) VALUES ('Vendedor');
@@ -506,13 +519,13 @@ INSERT INTO PERFIL (nombreCargo) VALUES ('Bodeguero');
 
 
 --------EMPLEADO----------
-INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,digitoVerif,nombre,apellido,correo,contrasena) VALUES (1,1,213,30,1,'19557236','4','Francisco','Sepulveda','f@gmail.com','admin');
-INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,digitoVerif,nombre,apellido,correo,contrasena) VALUES (2,2,214,30,1,'19513412','2','David','Mandiola','d@gmail.com','venta');
-INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,digitoVerif,nombre,apellido,correo,contrasena) VALUES (3,3,214,30,1,'20324243','6','Mauricio','Abarca','C@gmail.com','Bodeguero');
+INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,digitoVerif,nombre,apellido,correo,contrasena) VALUES (1,1,1,1,'19557236','4','Francisco','Sepulveda','f@gmail.com','admin');
+INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,digitoVerif,nombre,apellido,correo,contrasena) VALUES (2,2,1,1,'19513412','2','David','Mandiola','d@gmail.com','venta');
+INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,digitoVerif,nombre,apellido,correo,contrasena) VALUES (3,2,1,1,'20324243','6','Mauricio','Abarca','C@gmail.com','Bodeguero');
 
 
 --------VENTAS------------
-INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (2,114,1,31,1,1,1,1);
-INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (3,112,1,32,2,2,2,0);
-INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (4,153,1,33,1,3,1,1);
+INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (1,1,31,1,8,1,1);
+INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (2,1,32,2,8,2,0);
+INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (3,1,33,1,8,1,1);
 
