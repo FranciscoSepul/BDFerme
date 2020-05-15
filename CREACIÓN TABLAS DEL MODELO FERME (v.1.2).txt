@@ -518,7 +518,6 @@ INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,digitoVe
 
 
 --------VENTAS------------
-INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (1,1,31,1,8,1,1);
-INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (2,1,32,2,8,2,0);
-INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (3,1,33,1,8,1,1);
-
+INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (1,1,1,1,2,1,1);
+INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (2,1,2,2,2,2,0);
+INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (3,1,1,1,2,1,1);

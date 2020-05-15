@@ -14,3 +14,41 @@ drop table CLIENTE cascade constraints;
 drop table DOCUMENTO cascade constraints;
 drop table PRODUCTO cascade constraints;
 drop table empresa cascade constraints;
+drop table tipodocumento cascade constraints;
+
+--drop sequence
+
+drop sequence "F"."AUIDCLIENTE";
+drop sequence "F"."AUIDDETALLEVENTA";
+drop sequence "F"."AUIDDIRE";
+drop sequence "F"."AUIDDOCUMENTO";
+drop sequence "F"."AUIDEMPLEA";
+drop sequence "F"."AUIDEMPRESA";
+drop sequence "F"."AUIDFORMADEPAGO";
+drop sequence "F"."AUIDORDENESCOMPRA";
+drop sequence "F"."AUIDPERFIL";
+drop sequence "F"."AUIDPRODUCTO";
+drop sequence "F"."AUIDPROVEEDOR";
+drop sequence "F"."AUIDRETIRO";
+drop sequence "F"."AUIDSUCURSAL";
+drop sequence "F"."AUIDTIPODOCUMENTO";
+drop sequence "F"."AUIDTIPOPRODUCTO";
+drop sequence "F"."AUIDVENTAS";
+
+--drop trigger
+drop trigger "F"."AUTOIDCLIENTE";
+drop trigger "F"."AUTOIDDETALLEVENTA";
+drop trigger "F"."AUTOIDDIRECCION";
+drop trigger "F"."AUTOIDDOCUMENTO";
+drop trigger "F"."AUTOIDEMPLEADO";
+drop trigger "F"."AUTOIDEMPRESA";
+drop trigger "F"."AUTOIDFORMADEPAGO";
+drop trigger "F"."AUTOIDORDENESCOMPRA";
+drop trigger "F"."AUTOIDPERFIL";
+drop trigger "F"."AUTOIDPRODUCTO";
+drop trigger "F"."AUTOIDPROVEEDOR";
+drop trigger "F"."AUTOIDRETIRO";
+drop trigger "F"."AUTOIDSUCURSAL";
+drop trigger "F"."AUTOIDTIPODOCUMENTO";
+drop trigger "F"."AUTOIDTIPOPRODUCTO";
+drop trigger "F"."AUTOIDVENTAS";
