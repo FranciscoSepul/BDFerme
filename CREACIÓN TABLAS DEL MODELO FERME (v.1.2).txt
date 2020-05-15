@@ -357,13 +357,6 @@ begin
   select AuidEmplea.nextval into :new.id from DUAL;
 end;
 
-create or replace trigger autoidVENTAS
-before insert on VENTAS
-for each row
-begin
-  select AuidVENTAS.nextval into :new.id from DUAL;
-end;
-
 create or replace trigger autoidCLIENTE
 before insert on CLIENTE
 for each row
