@@ -2,21 +2,22 @@
 -- Archivo creado  - viernes-mayo-22-2020   
 --------------------------------------------------------
 --------------------------------------------------------
---  DDL for Procedure LISTARCLIENTES
+--  DDL for Procedure LISTARTODOSCLIENTES
 --------------------------------------------------------
 set define off;
 
-  CREATE OR REPLACE PROCEDURE LISTARCLIENTES(C_MEMORIA OUT SYS_REFCURSOR, P_RUNCLIENTE IN VARCHAR2)
+  CREATE OR REPLACE PROCEDURELISTARTODOSCLIENTES(C_MEMORIA OUT SYS_REFCURSOR)
 AS
 BEGIN 
   OPEN C_MEMORIA FOR SELECT CLI.ID, DIR.PASAJE, DIR.NUMERO, DIR.COMUNA, CLI.RUNCLIENTE, CLI.DIGITOVERIF, CLI.ESTADO, CLI.NOMBRE, CLI.APELLIDO,
                             CLI.CORREO, CLI.CONTRASENA FROM CLIENTE CLI
-                            INNER JOIN DIRECCION DIR ON CLI.IDDIRECCION = DIR.ID  
-                            WHERE RUNCLIENTE = P_RUNCLIENTE;
+                            INNER JOIN DIRECCION DIR ON CLI.IDDIRECCION = DIR.ID;  
+                            
 END;
 
 
 set autoprint on;
 VARIABLE C_MEMORIA REFCURSOR;
-EXECUTE listarClientes(:C_MEMORIA, '12423531');
+EXECUTE listartodosclientes(:C_MEMORIA);
+
 /
