@@ -338,10 +338,7 @@ start with 1
 increment by 1
 order;
 
-create sequence AuidVENTAS
-start with 1
-increment by 1
-order;
+
 ----------trigger-----------
 create or replace trigger autoidDIRECCION
 before insert on DIRECCION
