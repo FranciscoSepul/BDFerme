@@ -12,4 +12,3 @@ END;
 set autoprint on;
 --VARIABLE C_MEMORIA REFCURSOR;
 --EXECUTE listarClientes(:C_MEMORIA, '12423531');
-
