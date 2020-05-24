@@ -5,3 +5,9 @@ producto
 retiro creo que no es necesaria ya que deberia estar con venta  y esta deberia traer  todo lo que este ascociada  en codigo mostramos solo lo que nos interese mostrar
 
 
+    mvn install:install-file -Dfile=C:\Desarrollo\FermeEscritorio\jar\RSScaleLabel.jar -DgroupId=org.Apache.cxf -DartifactId=cxf-bundle -Dpackaging=jar
+
+<dependency>
+<groupId>org.Apache.cxf</groupId>
+<artifactId>RSScaleLabel</artifactId>
+</dependency>
