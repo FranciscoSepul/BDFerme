@@ -1,0 +1,7 @@
+Ordenes de compra 
+documentos con clientes si es que esta anclada a esa tabla 
+ordenes de compra 
+producto 
+retiro creo que no es necesaria ya que deberia estar con venta  y esta deberia traer  todo lo que este ascociada  en codigo mostramos solo lo que nos interese mostrar
+
+
