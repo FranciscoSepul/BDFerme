@@ -16,11 +16,11 @@
 {"id":1,"tipodoc":1,"numfolio":14515151,"fecha":"20-04-2020"}
 ,{"id":2,"tipodoc":2,"numfolio":14515152,"fecha":"21-04-2020"}
 ,{"id":3,"tipodoc":1,"numfolio":14515153,"fecha":"19-04-2020"}
-]}{"results":[{"columns":[{"name":"ID","type":"NUMBER"},{"name":"IDCARGO","type":"NUMBER"},{"name":"IDDIRECCION","type":"NUMBER"},{"name":"IDSUCURSAL","type":"NUMBER"},{"name":"ESTADO","type":"NUMBER"},{"name":"RUNEMPLEADO","type":"VARCHAR2"},{"name":"DIGITOVERIF","type":"VARCHAR2"},{"name":"NOMBREE","type":"VARCHAR2"},{"name":"APELLIDO","type":"VARCHAR2"},{"name":"CORREOEMPLE","type":"VARCHAR2"},{"name":"CONTRASENA","type":"VARCHAR2"}],"items":
+]}{"results":[{"columns":[{"name":"ID","type":"NUMBER"},{"name":"IDCARGO","type":"NUMBER"},{"name":"IDDIRECCION","type":"NUMBER"},{"name":"IDSUCURSAL","type":"NUMBER"},{"name":"ESTADO","type":"NUMBER"},{"name":"RUNEMPLEADO","type":"VARCHAR2"},{"name":"DIGITOVERIF","type":"VARCHAR2"},{"name":"NOMBREE","type":"VARCHAR2"},{"name":"APELLIDO","type":"VARCHAR2"},{"name":"CORREOEMPLE","type":"VARCHAR2"},{"name":"CONTRASENA","type":"VARCHAR2"},{"name":"SEXOE","type":"NUMBER"}],"items":
 [
-{"id":1,"idcargo":1,"iddireccion":1,"idsucursal":1,"estado":1,"runempleado":"19557236","digitoverif":"4","nombree":"Francisco","apellido":"Sepulveda","correoemple":"f@gmail.com","contrasena":"8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"}
-,{"id":2,"idcargo":2,"iddireccion":2,"idsucursal":1,"estado":1,"runempleado":"19513412","digitoverif":"2","nombree":"David","apellido":"Mandiola","correoemple":"d@gmail.com","contrasena":"8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"}
-,{"id":3,"idcargo":3,"iddireccion":2,"idsucursal":1,"estado":1,"runempleado":"20324243","digitoverif":"6","nombree":"Mauricio","apellido":"Abarca","correoemple":"C@gmail.com","contrasena":"8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"}
+{"id":1,"idcargo":1,"iddireccion":1,"idsucursal":1,"estado":1,"runempleado":"19557236","digitoverif":"4","nombree":"Francisco","apellido":"Sepulveda","correoemple":"f@gmail.com","contrasena":"8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918","sexoe":1}
+,{"id":2,"idcargo":2,"iddireccion":2,"idsucursal":1,"estado":1,"runempleado":"19513412","digitoverif":"2","nombree":"David","apellido":"Mandiola","correoemple":"d@gmail.com","contrasena":"8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918","sexoe":0}
+,{"id":3,"idcargo":3,"iddireccion":2,"idsucursal":1,"estado":1,"runempleado":"20324243","digitoverif":"6","nombree":"Mauricio","apellido":"Abarca","correoemple":"C@gmail.com","contrasena":"8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918","sexoe":0}
 ]}{"results":[{"columns":[{"name":"ID","type":"NUMBER"},{"name":"RUTEMPRESA","type":"VARCHAR2"},{"name":"DVRUT","type":"VARCHAR2"},{"name":"NOMBTEEMPRESA","type":"VARCHAR2"},{"name":"CORREOEMP","type":"VARCHAR2"},{"name":"NUMEROTEL","type":"VARCHAR2"}],"items":
 [
 {"id":1,"rutempresa":"17335237","dvrut":"5","nombteempresa":"Planta Carnivora","correoemp":"EnteraAsesina@gmail.com","numerotel":"914515153"}
