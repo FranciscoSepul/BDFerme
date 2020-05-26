@@ -44,6 +44,7 @@ CREATE TABLE DOCUMENTO
   id       INTEGER, 
   tipoDoc  INTEGER , 
   NumFolio INTEGER NOT NULL , 
+  RutaDoc     VARCHAR2(400),
   fecha    VARCHAR2(40)
 );
 ALTER TABLE DOCUMENTO 
@@ -113,6 +114,7 @@ CREATE TABLE PRODUCTO
   idSucursal     INTEGER NOT NULL ,
   idProveedor    INTEGER NOT NULL ,
   nombre         VARCHAR2(40) NOT NULL , 
+  RutaImg     VARCHAR2(400),
   stock          INTEGER NOT NULL ,
   preciouni      INTEGER NOT NULL
 );
@@ -519,34 +521,3 @@ INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,sexoE,di
 INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (1,1,1,1,2,1,1);
 INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (2,1,2,2,2,2,0);
 INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (3,1,1,1,2,1,1);
-
-
-mvn install:install-file -Dfile=C:\Desarrollo\FermeEscritorio\jar\RSScaleLabel.jar -DgroupId=org.Apache.cxf -DartifactId=cxf-bundle -Dversion=2.7.3 -Dpackaging=jar
-
-  Empleado emp = new Empleado();
-
-    public Container() {
-        initComponents();
-        this.setLocationRelativeTo(null);
-        //Logo        
-        rsscalelabel.RSScaleLabel.setScaleLabel(Lbl1, "src\\main\\java\\FermePage\\Imagenes\\FERME Logo.png");
-
-//        //Imagen button 
-//        rsscalelabel.RSScaleLabel.setScaleLabel(lblSearch, "src\\main\\java\\FermePage\\Imagenes\\search.png");
-//        ///Se modifica el panel body
-////        rsscalelabel.RSScaleLabel.setScaleLabel(body,"LogInCli" );
-//         
-//        //Imagen Cliente aca deberia ir una condicion si el cliente es hombre usar la imagen de la mujer 
-//        if (emp != null) {
-//            if (emp.getSexo() != 0) {
-//                rsscalelabel.RSScaleLabel.setScaleLabel(LblUsers, "src\\main\\java\\FermePage\\Imagenes\\userFemale.png");
-//            } else {
-//                if (emp.getIDCARGO() == 1) {
-//                    rsscalelabel.RSScaleLabel.setScaleLabel(LblUsers, "src\\main\\java\\FermePage\\Imagenes\\userAdmin.png");
-//                } else {
-//                    rsscalelabel.RSScaleLabel.setScaleLabel(LblUsers, "src\\main\\java\\FermePage\\Imagenes\\userMen.png");
-//                }
-//            }
-//        } else {
-//            rsscalelabel.RSScaleLabel.setScaleLabel(LblUsers, "src\\main\\java\\FermePage\\Imagenes\\userAll.png");
-//        }

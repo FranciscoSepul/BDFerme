@@ -4,7 +4,7 @@ AS
 BEGIN 
   OPEN C_MEMORIA FOR SELECT EMP.ID, DIR.PASAJE, DIR.NUMERO, DIR.COMUNA, SUC.NOMBRES , EMP.ESTADO, EMP.RUNEMPLEADO, EMP.DIGITOVERIF, 
                             EMP.NOMBREE, EMP.APELLIDO,DIR.NUMERODEPTO,DIR.REGION,suc.TELEFONO,
-                            emp.correoemple, EMP.CONTRASENA FROM EMPLEADO EMP
+                            emp.correoemple, EMP.CONTRASENA,emp.sexoe,emp.idCargo FROM EMPLEADO EMP
                             INNER JOIN DIRECCION DIR ON EMP.IDDIRECCION = DIR.ID 
                             LEFT JOIN SUCURSAL SUC ON EMP.IDSUCURSAL = SUC.ID
                             WHERE RUNEMPLEADO = P_RUNEMPLEADO;
