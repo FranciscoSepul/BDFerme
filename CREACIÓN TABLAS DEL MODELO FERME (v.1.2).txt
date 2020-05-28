@@ -460,7 +460,7 @@ INSERT INTO DIRECCION (region,comuna,pasaje,numero,numeroDepto) VALUES (13, 'Ind
 INSERT INTO DIRECCION (region,comuna,pasaje,numero,numeroDepto) VALUES (13, 'Santiago', 'Calle falsa',123,null);
 INSERT INTO DIRECCION (region,comuna,pasaje,numero,numeroDepto) VALUES (13, 'Chicureo', 'Brisas',1231,null);
 
-----------CLIENTE-----------8 
+----------CLIENTE-----------
 INSERT INTO CLIENTE (iddireccion,runCliente,digitoVerif,estado,nombre,apellido,sexo,correocli,contrasena ) VALUES (1,'12423531','k',1, 'Juan', 'Reyes',1,'Juan@gmail.com','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
 INSERT INTO CLIENTE (iddireccion,runCliente,digitoVerif,estado,nombre,apellido,sexo,correocli,contrasena ) VALUES (2,'12366343','4',1, 'Roberto', 'Cubillos',1,'Roberto@gmail.com','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
 INSERT INTO CLIENTE (iddireccion,runCliente,digitoVerif,estado,nombre,apellido,sexo,correocli,contrasena ) VALUES (3,'14555312','7',1, 'Arturo', 'R2d2',1,'R2d2@gmail.com','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
@@ -483,7 +483,7 @@ INSERT INTO FORMADEPAGO (efectivo,debito,tarjeta,pOnline) VALUES (0,1,0,0);
 
 --------EMPRESA-----------
 INSERT INTO EMPRESA (rutEmpresa,dvrut,nombteEmpresa,correoEmp,numerotel) VALUES ('17335237','5','Planta Carnivora','EnteraAsesina@gmail.com','914515153');
-----------voy en empresa probado ok 
+
 --------PROVEEDOR---------
 INSERT INTO PROVEEDOR (idEmpresa,runProveedor,digitoVerif,estado,nombre,numerotel,direccion,correoProv) VALUES (1,'17335987','7',1,'ARTURO VARGAS','914515153','General 666','ARTURO@gmail.com');
 
@@ -491,10 +491,13 @@ INSERT INTO PROVEEDOR (idEmpresa,runProveedor,digitoVerif,estado,nombre,numerote
 INSERT INTO SUCURSAL (iddireccion,nombres,telefono) VALUES (2,'Santiago Ferme','943264512');
 
 --------TIPOPRODUCTO------
-INSERT INTO TIPOPRODUCTO (nombreTipoProducto) VALUES ('Herramienta');
+INSERT INTO TIPOPRODUCTO (nombreTipoProducto) VALUES ('Martillo');
+INSERT INTO TIPOPRODUCTO (nombreTipoProducto) VALUES ('Motosierra');
+INSERT INTO TIPOPRODUCTO (nombreTipoProducto) VALUES ('Cemento');
 
 --------PRODUCTO---------
-INSERT INTO PRODUCTO (idTipoProducto,idSucursal,idProveedor,nombre,stock,preciouni) VALUES (1,1,1,'Martillo',100,5000);
+INSERT INTO PRODUCTO (idTipoProducto,idSucursal,idProveedor,nombre,stock,preciouni,rutadoc) VALUES (1,1,1,'Martillo',100,5000,'STANMartillo');
+INSERT INTO PRODUCTO (idTipoProducto,idSucursal,idProveedor,nombre,stock,preciouni,rutadoc) VALUES (2,1,1,'STIHL_MS-180C',100,5000,'MOTOSIERRA_STIHL_MS-180C');
 
 --------ORDENESCOMPRA-----
 INSERT INTO ORDENESCOMPRA (idSuc,idProveedor,fecha,cantidad) VALUES (1,1,'15-04-2020',100);
@@ -519,3 +522,4 @@ INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,sexoE,di
 INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (1,1,1,1,2,1,1);
 INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (2,1,2,2,2,2,0);
 INSERT INTO VENTAS (idCliente,iddetalle,idDoc,idretiro,idEmpleado,idFormaPago,Estado) VALUES (3,1,1,1,2,1,1);
+
