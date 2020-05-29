@@ -44,7 +44,7 @@ CREATE TABLE DOCUMENTO
   id       INTEGER, 
   tipoDoc  INTEGER , 
   NumFolio INTEGER NOT NULL , 
-  fecha    VARCHAR2(40)
+  fecha    VARCHAR2(40),
   rutadoc  VARCHAR2(400)
 );
 ALTER TABLE DOCUMENTO 
