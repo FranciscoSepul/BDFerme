@@ -515,8 +515,8 @@ INSERT INTO PERFIL (nombreCargo) VALUES ('Bodeguero');
 
 
 --------EMPLEADO----------
-INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,sexoE,digitoVerif,nombree,apellido,correoEmple,contrasena) VALUES (1,1,1,1,'19557236',1,'4','Francisco','Sepulveda','f@gmail.com','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
-INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,sexoE,digitoVerif,nombree,apellido,correoEmple,contrasena) VALUES (2,2,1,1,'19513412',0,'2','David','Mandiola','d@gmail.com','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
+INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,sexoE,digitoVerif,nombree,apellido,correoEmple,contrasena) VALUES (1,1,1,1,'19557236',1,'4','Francisco','Sepulveda','Franciscosepul96@gmail.com','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
+INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,sexoE,digitoVerif,nombree,apellido,correoEmple,contrasena) VALUES (2,2,1,1,'19513412',0,'2','David','Mandiola','davidmandiola300@gmail.com','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
 INSERT INTO EMPLEADO (idcargo,iddireccion,idsucursal,estado,runEmpleado,sexoE,digitoVerif,nombree,apellido,correoEmple,contrasena) VALUES (3,2,1,1,'20324243',1,'6','Mauricio','Abarca','C@gmail.com','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
 
 
