@@ -1,13 +1,16 @@
-Ordenes de compra 
-documentos con clientes si es que esta anclada a esa tabla 
-ordenes de compra 
-producto 
-retiro creo que no es necesaria ya que deberia estar con venta  y esta deberia traer  todo lo que este ascociada  en codigo mostramos solo lo que nos interese mostrar
-
-
-    mvn install:install-file -Dfile=C:\Desarrollo\FermeEscritorio\jar\RSScaleLabel.jar -DgroupId=org.Apache.cxf -DartifactId=cxf-bundle -Dpackaging=jar
-
-<dependency>
-<groupId>org.Apache.cxf</groupId>
-<artifactId>RSScaleLabel</artifactId>
-</dependency>
+Estos  los procedimientos faltantes si crean alguno porfa borrarlo de la lista
+--detalleventa
+-Select * from detalleventa
+-"insert into detalleventa( idproducto, fechacompra, cantidad, total) values(?,?,?,?)
+--direccion
+-INSERT INTO DIRECCION (region,comuna,pasaje,numero,numeroDepto) VALUES (?, ?,?,?,?)
+-select * from DIRECCION where region=? and comuna=? and pasaje=?
+---empleado
+-select * from empleado where correoemple =?
+-update empleado set contrasena = ? ,cambioPass=? where runempleado = ?
+-update empleado set nombree = ? ,apellido=?,correoemple=?,contrasena=?  where runempleado = ?
+--Producto
+-"update producto set preciouni = ? where nombre = ?
+-update producto set stock = ? where nombre = ?
+--sucursal
+-select * from sucursal where nombres=?
