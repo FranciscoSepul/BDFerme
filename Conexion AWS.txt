@@ -1,0 +1,8 @@
+instancia: fermebd
+
+master user: admin
+master password: oracle123
+
+nombre del host: fermebd.cay6gjof12jf.us-east-2.rds.amazonaws.com
+SID: FERMEBD
+puerto: 1521
