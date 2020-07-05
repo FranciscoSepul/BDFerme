@@ -497,10 +497,12 @@ INSERT INTO SUCURSAL (iddireccion,nombres,telefono) VALUES (2,'Santiago Ferme','
 INSERT INTO TIPOPRODUCTO (nombreTipoProducto) VALUES ('Martillo');
 INSERT INTO TIPOPRODUCTO (nombreTipoProducto) VALUES ('Motosierra');
 INSERT INTO TIPOPRODUCTO (nombreTipoProducto) VALUES ('Cemento');
+INSERT INTO TIPOPRODUCTO (nombreTipoProducto) VALUES ('Kits');
 
 --------PRODUCTO---------
-INSERT INTO PRODUCTO (idTipoProducto,idSucursal,idProveedor,nombre,stock,preciouni,rutadoc) VALUES (1,1,1,'Martillo',100,5000,'STANMartillo'. 1);
-INSERT INTO PRODUCTO (idTipoProducto,idSucursal,idProveedor,nombre,stock,preciouni,rutadoc) VALUES (2,1,1,'STIHL_MS-180C',100,5000,'MOTOSIERRA_STIHL_MS-180C', 1);
+INSERT INTO PRODUCTO (idTipoProducto,idSucursal,idProveedor,nombre,stock,preciouni,rutadoc,estado) VALUES (1,1,1,'Martillo',100,5000,'STANMartillo', 1);
+INSERT INTO PRODUCTO (idTipoProducto,idSucursal,idProveedor,nombre,stock,preciouni,rutadoc,estado) VALUES (2,1,1,'STIHL_MS-180C',100,5000,'MOTOSIERRA_STIHL_MS-180C', 1);
+INSERT INTO PRODUCTO (idTipoProducto,idSucursal,idProveedor,nombre,stock,preciouni,rutadoc,estado) VALUES (21,1,1,'Kit Herramientas',120,65000,'KitHerramienta', 1);
 
 --------ORDENESCOMPRA-----
 INSERT INTO ORDENESCOMPRA (idSuc,idProveedor,fecha,cantidad) VALUES (1,1,'15-04-2020',100);

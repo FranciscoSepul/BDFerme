@@ -1,7 +1,7 @@
 Estos  los procedimientos faltantes si crean alguno porfa borrarlo de la lista
 --detalleventa
 -Select * from detalleventa
--"insert into detalleventa( idproducto, fechacompra, cantidad, total) values(?,?,?,?)
+-"insert into detalleventa( idproducto, fechacompra, cantidad, total) values(?,?,?,?) LISTO
 --direccion
 -INSERT INTO DIRECCION (region,comuna,pasaje,numero,numeroDepto) VALUES (?, ?,?,?,?)
 -select * from DIRECCION where region=? and comuna=? and pasaje=?
